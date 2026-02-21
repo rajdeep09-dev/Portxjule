@@ -24,9 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans bg-background text-foreground antialiased selection:bg-white selection:text-black`}>
+        <div className="noise-overlay" aria-hidden="true" />
         <Navbar />
         <PageTransition>
-          <main className="min-h-screen pt-24">
+          <main className="min-h-screen pt-24 relative overflow-hidden">
             {children}
           </main>
           <Footer />
